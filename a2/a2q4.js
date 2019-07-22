@@ -8,14 +8,14 @@ var ChkArmstrong = (function (iNo) {
         iValue = Math.round(iValue / 10);
         iCnt++;
     }
-    console.log("TCL: ChkArmstrong -> iValue", iValue);
-    console.log("TCL: ChkArmstrong -> iCnt", iCnt);
+    // console.log("TCL: ChkArmstrong -> iValue", iValue)
+    // console.log("TCL: ChkArmstrong -> iCnt", iCnt)
     iValue = iNo;
     // for separating digit
     while (iValue != 0) {
-        console.log("TCL: start -> iValue", iValue);
+        // console.log("TCL: start -> iValue", iValue)
         iDigit = Math.round(iValue % 10); //separate last digit
-        console.log("TCL: ChkArmstrong -> iDigit", iDigit);
+        // console.log("TCL: ChkArmstrong -> iDigit", iDigit)
         i = 1; //set i=1 for iteration digit power
         iPower = 1; //set power=1 for new power of each digit
         while (i <= iCnt) //iterate till total count of digit
@@ -23,16 +23,16 @@ var ChkArmstrong = (function (iNo) {
             iPower = iPower * iDigit; //calculate factorial of each digit
             i++; //increment i till icnt
         }
-        console.log("TCL: ChkArmstrong -> iPower", iPower);
+        // console.log("TCL: ChkArmstrong -> iPower", iPower)
         iSum = iSum + iPower; //calculate sum of power of all digit
         console.log("bef  -> iValue", iValue);
         iValue = iValue / 10;
         console.log("aft  -> iValue", iValue);
         var a = iValue.toString().split("."); ///before
-        console.log("TCL: -> a", a[0]);
+        // console.log("TCL: -> a", a[0])
         iValue = a[0];
     }
-    console.log("TCL: ChkArmstrong -> iSum", iSum);
+    // console.log("TCL: ChkArmstrong -> iSum", iSum)
     if (iSum == iNo)
         return 1;
     else
